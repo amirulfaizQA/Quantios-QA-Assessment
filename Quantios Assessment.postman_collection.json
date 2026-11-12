@@ -1,0 +1,75 @@
+{
+  "info": {
+    "_postman_id": "4f651e12-0ebd-40f9-b71f-3425f4732335",
+    "name": "Quantios Assessment",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "60134046",
+    "_collection_link": "https://go.postman.co/collection/60134046-4f651e12-0ebd-40f9-b71f-3425f4732335?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "watchlist_post",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\": \"QAUser\",\r\n    \"symbol\": \"AAPL\",\r\n    \"name\": \"Apple Inc.\",\r\n    \"price\": 150.54,\r\n    \"change\": 0.5,\r\n    \"change_percent\": 0.5\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://qainterview.netlify.app/.netlify/functions/watchlist_post",
+          "protocol": "https",
+          "host": [
+            "qainterview",
+            "netlify",
+            "app"
+          ],
+          "path": [
+            ".netlify",
+            "functions",
+            "watchlist_post"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "watchlist_get",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://qainterview.netlify.app/.netlify/functions/watchlist_get?username=QAUser",
+          "protocol": "https",
+          "host": [
+            "qainterview",
+            "netlify",
+            "app"
+          ],
+          "path": [
+            ".netlify",
+            "functions",
+            "watchlist_get"
+          ],
+          "query": [
+            {
+              "key": "username",
+              "value": "QAUser"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
